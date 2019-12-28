@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+	
+<head>
+<meta charset="utf-8">
+<meta name="seth-xavier" content="Web development. Web design">
+<meta name="google" content="nositelinkssearchbox" />
+<meta http-equiv="cleartype" content="on">
+<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+<meta http-equiv="refresh" content="300" />
+<meta name="http-equiv" content="X-Robots-Tag : noindex, follow" />
+	
+<picture> 
+  <source srcset="small.png" type="image/png">
+  
+  <source srcset="medium.png" media="(min-width: 768px)">
+  
+  <source srcset="large.png" media="(min-width: 1200px)">
+</picture>
+	
+<script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+                    
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+	
+	window.onload = function() {
+  // Month Day, Year Hour:Minute:Second, id-of-element-container
+  countUpFromTime("Apr 26, 2019 00:00:00", 'countup1'); //
+};
+function countUpFromTime(countFrom, id) {
+  countFrom = new Date(countFrom).getTime();
+  var now = new Date(),
+      countFrom = new Date(countFrom),
+      timeDifference = (now - countFrom);
+    
+  var secondsInADay = 60 * 60 * 1000 * 24,
+      secondsInAHour = 60 * 60 * 1000;
+    
+  days = Math.floor(timeDifference / (secondsInADay) * 1);
+  years = Math.floor(days / 365);
+  if (years > 1){ days = days - (years * 365) }
+  hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+  mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+  secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+
+  var idEl = document.getElementById(id);
+  idEl.getElementsByClassName('years')[0].innerHTML = years;
+  idEl.getElementsByClassName('days')[0].innerHTML = days;
+  idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+  idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+  idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+
+  clearTimeout(countUpFromTime.interval);
+  countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
+}
+</script>
+	
+<title>Seth Xavier | About Page</title>
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link rel="stylesheet" href="https://use.typekit.net/hwf6nju.css">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<about-header>
+    	<div class="full-width2">
+        	<div class="logo">
+				<img src="https://i.postimg.cc/J0wY2XD3/sx-logo-tra.png" class="img-responsive" alt="Responsive image">
+            </div>
+            	<div class="navigation">
+            		<div id="mySidenav" class="sidenav">
+                		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    	<a href="../index.html#">Home</a>
+                    	<a href="../portfolio/index.html#">Portfolio</a>
+                    	<a href="../services/index.html#">Services</a>
+                    	<a href="../contact/index.html#">Contact</a>
+                 	</div>
+                 	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+             	</div>
+			</div>
+                
+         <div class="about-heading">
+            <h2 style="font-size:5.7vw">About</h2>
+         </div>
+		
+		<div class="vl"></div>
+		
+		<div class="about-container">
+		<div class="about-top">
+           <p style="font-size:1.6vw">Odutola Odunaiya is a freelance Web Developer and Visual Designer. He works under the name Seth Xavier.</p>
+        </div>
+        <div class="about-mid">
+            <p style="font-size:1.6vw"><img src="https://i.postimg.cc/vHYq6NVn/pic-small.png" class="img-responsive" alt="Responsive image">Odutola broke into tech on the back of 15 years of varied experience spanning events to operations for governmental entities and private sectors companies in Africa and the Middle East.<br> A customer-centric professional, Odutola now helps small businesses, start-ups and individuals to maximise their online presence as well as offering conceptualisation and design services for branding &amp; identity planning.<br>When Odutola is not working, he is passionate about design (in all forms), travel and Arsenal FC. Utopia would be being able to do all three at the same time. Because that great idea can come to you at the oddest of times, Odutola can be reached at odutola@seth-xavier.com or alternatively, pop over to our contact page and fill out our form.</p>
+		 </div>
+		 </div>
+			
+		 <div class="about-socials">
+       			<ul>
+            		<li><a href="mailto:hi@seth-xavier.com?subject=hi"><img src="https://i.postimg.cc/XYvnkrR1/email-small.png" alt="EMAIL icon" class="responsive"/></a></li>
+                	<li><a href="https://www.instagram.com/sethixavier/"><img src="https://i.postimg.cc/d3MxDfFc/instagram-small.png" alt="INSTAGRAM icon" class="responsive"/></a></li>
+                	<li><a href="https://twitter.com/SethIXavier"><img src="https://i.postimg.cc/PxckyKkS/twitter-small.pngg" alt="TWITTER icon" class="responsive"/></a></li>
+                	<li><a href="https://www.linkedin.com/in/seth-xavier-8b396218b/"><img src="https://i.postimg.cc/vm7FR96v/linkedin-small.png" alt="LINKEDIN icon" class="responsive"/></a></li>
+                	<li><a href="https://www.google.com/maps/place/Mall+of+the+Emirates/@25.118107,55.1984193,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bbf14ecb6af:0x637f6b87f08b83c7!8m2!3d25.118107!4d55.200608"><img src="https://i.postimg.cc/FKxrywGm/location-small.png" alt="LOCATION icon" class="responsive"/></a></li>
+                	<li><a href="https://github.com/SethIXavier"><img src="https://i.postimg.cc/SNrj72KH/github-small.png" alt="GITHUB icon" class="responsive"/></a></li>
+            	</ul>
+		  </div>
+		
+		  <div class="skills">
+			  <li>
+				  <h3>HTML5</h3><span class="bar"><span class="html"></span></span>
+			  </li>
+			  
+			  <li>
+				  <h3>CSS3</h3><span class="bar"><span class="css3"></span></span>
+			  </li>
+			  
+			  <li>
+				  <h3>JAVASCRIPT</h3><span class="bar"><span class="javascript"></span></span>
+			  </li>
+			  
+			  <li>
+				  <h3>Photoshop</h3><span class="bar"><span class="photoshop"></span></span>
+			  </li>
+			  
+			  <li>
+				  <h3>Illustrator</h3><span class="bar"><span class="illustrator"></span></span>
+			  </li>
+			  
+			  <li>
+				  <h3>InDesign</h3><span class="bar"><span class="indesign"></span></span>
+			  </li>
+		</div>
+		
+		 <div class="countup" id="countup1">
+  			<span class="timeel years">00</span>
+  			<span class="timeel timeRefYears">yrs</span>
+  			<span class="timeel days">00</span>
+  			<span class="timeel timeRefDays">dys</span>
+  			<span class="timeel hours">00</span>
+  			<span class="timeel timeRefHours">hrs</span>
+  			<span class="timeel minutes">00</span>
+  			<span class="timeel timeRefMinutes">mins</span>
+  			<span class="timeel seconds">00</span>
+  			<span class="timeel timeRefSeconds">secs</span>
+		 </div>
+	</about-header>
+			
+    	<div class="footer">
+    		<p style="font-size:1.2vw">&#169;Copyright Seth Xavier 2019. All rights reserved.</p>
+    	</div>
+</body>
+</html>
